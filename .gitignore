@@ -1,35 +1,18 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results files
-TestResults.xml
-
-### Frontend ###
-#node_modules folder
+# Dependencies
 node_modules/
-#build folder
-build/
-#yarn.lock file
-yarn.lock
+
 #package-lock.json file
 package-lock.json
+
+#yarn.lock file
+yarn.lock
+
+# Build output
+dist/
+build/
+
+# Pasta de produção
+#frontend-prod/
 
 ### Environment Variables ###
 .env
@@ -37,3 +20,31 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Database
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+#Template for AL projects for Dynamics 365 Business Central
+.alcache/
+.alpackages/
+.snapshots/
+.output/
+*.app
+rad.json
+*.g.xlf
+*.flf
+TestResults.xml
