@@ -102,3 +102,75 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+
+## Build de Produção
+
+Para realizar o build de produção e iniciar o projeto, siga os passos abaixo:
+
+### 1. Build Manual
+
+```bash
+# Limpa o diretório dist
+npm run build:clean
+
+# Realiza o build de produção
+npm run build:prod
+
+# Copia os arquivos para o diretório dist
+npm run build:copy
+```
+
+### 2. Build Automático
+
+Para facilitar o processo, foi criado um arquivo batch que executa todos os passos automaticamente:
+
+1. Execute o arquivo [build-and-start.bat](cci:7://file:///f:/ID02SSDExt/AlsDev/WS-IA/projeto-IA-001/frontend001/build-and-start.bat:0:0-0:0) (duplo clique)
+2. O script irá:
+   - Limpar o diretório dist
+   - Realizar o build de produção
+   - Copiar os arquivos para o diretório dist
+   - Iniciar o servidor de desenvolvimento
+
+### Estrutura do Build
+
+Após o build, a estrutura será:
+
+```bash
+frontend001/
+├── dist/              # Diretório de produção
+│   ├── index.html
+│   ├── static/
+│   └── ...           # Outros arquivos de produção
+├── build/            # Diretório temporário do build
+└── src/             # Código fonte
+```
+
+### Observações
+
+- O arquivo [build-and-start.bat](cci:7://file:///f:/ID02SSDExt/AlsDev/WS-IA/projeto-IA-001/frontend001/build-and-start.bat:0:0-0:0) deve ser executado como administrador para garantir permissões adequadas
+- O build de produção está otimizado para produção com minificação e remoção de código não utilizado
+- O diretório `dist` contém a versão final para produção do projeto
+
+### Iniciando o Servidor de Produção
+
+Depois de fazer o build, você pode iniciar o servidor de produção de duas maneiras:
+
+1. Usando o arquivo batch:
+   - Execute o arquivo [start-dist.bat](cci:7://file:///f:/ID02SSDExt/AlsDev/WS-IA/projeto-IA-001/frontend001/start-dist.bat:0:0-0:0) (duplo clique)
+   - O servidor será iniciado em <http://localhost:8080>
+2. Manualmente:
+
+   ```bash
+   # Navegue para a pasta dist
+   cd dist
+   
+   # Inicie o servidor HTTP
+   python -m http.server 8080
+   ```
+
+### Observações Importantes
+
+- Certifique-se de ter Python instalado no sistema
+- O servidor pode ser parado pressionando Ctrl+C
+- O arquivo [start-dist.bat](cci:7://file:///f:/ID02SSDExt/AlsDev/WS-IA/projeto-IA-001/frontend001/start-dist.bat:0:0-0:0) verifica se o diretório dist existe antes de iniciar
+- O servidor roda na porta 8080 por padrão

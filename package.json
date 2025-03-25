@@ -23,7 +23,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:prod": "npm run build",
+    "build:clean": "rmdir /s /q dist && mkdir dist",
+    "build:copy": "xcopy /E /I /Y build dist",
+    "build:all": "npm run build:clean && npm run build && npm run build:copy"
   },
   "eslintConfig": {
     "extends": [
